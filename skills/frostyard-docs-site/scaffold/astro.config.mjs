@@ -29,12 +29,5 @@ export default defineConfig({
   integrations: [mdx()],
   markdown: {
     shikiConfig: { theme: frostyardCold }
-  },
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ["/pagefind/pagefind.js"]
-      }
-    }
   }
 });
