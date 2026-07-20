@@ -2,6 +2,9 @@
 import { orderedDocs } from "../lib/nav";
 
 const docs = await orderedDocs();
+if (docs.length === 0) {
+  throw new Error("No docs content found: add at least one page under content/ with title/group/order frontmatter.");
+}
 const target = `/${docs[0].id}/`;
 ---
 <!doctype html>

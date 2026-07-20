@@ -14,7 +14,8 @@ const {
   current = "",
   groups,
   prev = null,
-  next = null
+  next = null,
+  noSearchIndex = false
 } = Astro.props;
 ---
 <!doctype html>
@@ -39,7 +40,7 @@ const {
           <summary>Contents</summary>
           <Sidebar groups={groups} current={current} />
         </details>
-        <div class="dk-prose" data-pagefind-body>
+        <div class="dk-prose" data-pagefind-body={noSearchIndex ? undefined : true}>
           <p class="dk-eyebrow"><span class="dk-dash"></span>{site.name} docs</p>
           <h1>{title}</h1>
           <slot />

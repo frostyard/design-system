@@ -69,7 +69,7 @@ When invoked in a project repo, the skill:
 
 1. Refuses to proceed if `site/` already exists (no overwriting).
 2. Copies `scaffold/` to `site/`.
-3. Fills `src/site.config.ts` from the repo itself: name from the repo directory / `go.mod` / `package.json`; kicker from the GitHub repo description (`gh repo view`); `sourceUrl` from the origin remote; `url` guessed from the user's `<name>.bjk.workers.dev` pattern, flagged for correction.
+3. Fills `src/site.config.ts` from the repo itself: name from the git origin remote, else the directory name; kicker from the GitHub repo description (`gh repo view`); `sourceUrl` from the origin remote; `url` guessed from the user's `<name>.bjk.workers.dev` pattern, flagged for correction.
 4. Appends `site/node_modules`, `site/dist`, `site/.astro` to the host repo's `.gitignore`.
 5. Seeds starter pages: adapts the repo's README into `content/getting-started/overview.md`; keeps one MDX example demonstrating `Callout` and code blocks; leaves the rest of the sample pages only if the user wants them.
 6. Sets the wrangler project name from the repo name.
@@ -111,7 +111,7 @@ Plain `.md` works everywhere; `.mdx` only needed when using components. `Callout
 
 ## Search
 
-Pagefind runs after the Astro build (`"build": "astro build && pagefind --site dist"`). The `Search.astro` component lazy-loads the Pagefind UI on focus, styled with the shell's surface/hairline/ice tokens. No search server; the index ships as static files.
+Pagefind runs after the Astro build (`"build": "astro build && pagefind --site dist"`). The `Search.astro` component loads Pagefind on first input, styled with the shell's surface/hairline/ice tokens. No search server; the index ships as static files.
 
 ## Deploy
 

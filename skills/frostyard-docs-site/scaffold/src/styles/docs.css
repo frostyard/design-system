@@ -28,7 +28,7 @@
 .dk-kicker{font-size:.72rem;color:var(--text-footer);margin-bottom:1.2rem}
 
 /* ── prose ──────────────────────────────────────────────────────── */
-.dk-eyebrow{font:700 .62rem var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-eyebrow);margin:0 0 .8rem}
+.dk-prose .dk-eyebrow{font:700 .62rem var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-eyebrow);margin:0 0 .8rem}
 .dk-dash{width:var(--eyebrow-dash-w);height:1px;background:var(--sky);display:inline-block;vertical-align:middle;margin-right:.6rem}
 .dk-prose h1{font-size:2.6rem;letter-spacing:-.06em;line-height:1;margin:0 0 1rem}
 .dk-prose h2{font-size:1.4rem;letter-spacing:-.04em;margin:2.4rem 0 .8rem;padding-top:1.4rem;border-top:1px solid var(--line)}
@@ -61,13 +61,14 @@
 .dk-disclosure{display:none;border:1px solid var(--line);margin-bottom:1.6rem}
 .dk-disclosure summary{font:700 .62rem var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--text-eyebrow);padding:.6rem .9rem;cursor:pointer;list-style:none}
 .dk-disclosure summary::before{content:"→ ";color:var(--sky)}
+.dk-disclosure summary::-webkit-details-marker{display:none}
 .dk-disclosure[open] summary::before{content:"↓ "}
 .dk-disclosure .dk-nav{padding:0 .9rem .9rem}
 
 /* ── search (used by Task 4's Search.astro) ─────────────────────── */
 .dk-search{position:relative}
 .dk-search input{background:var(--surface-code);border:1px solid var(--line);color:var(--text-body);font:inherit;font-size:.8rem;padding:.4rem .6rem;border-radius:var(--radius-tag);width:180px}
-.dk-search input:focus{outline:none;border-color:var(--line-strong)}
+.dk-search input:focus{outline:1px solid var(--sky);outline-offset:1px;border-color:var(--line-strong)}
 .dk-search-results{position:absolute;top:calc(100% + 8px);right:0;width:340px;max-height:60vh;overflow-y:auto;background:var(--gradient-panel);border:1px solid var(--line);padding:.4rem;z-index:10}
 .dk-search-results a{display:block;padding:.55rem .6rem;text-decoration:none;border-bottom:1px solid var(--line)}
 .dk-search-results a:last-child{border-bottom:none}

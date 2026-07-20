@@ -1,5 +1,5 @@
 <div class="dk-search">
-  <input id="dk-search-input" type="search" placeholder="Search docs" autocomplete="off" />
+  <input id="dk-search-input" type="search" placeholder="Search docs" aria-label="Search docs" autocomplete="off" />
   <div id="dk-search-results" class="dk-search-results" hidden></div>
 </div>
 <script>
@@ -53,6 +53,12 @@
 
   document.addEventListener("click", (e) => {
     if (panel && e.target instanceof Element && !e.target.closest(".dk-search")) {
+      panel.hidden = true;
+    }
+  });
+
+  input?.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && panel) {
       panel.hidden = true;
     }
   });
