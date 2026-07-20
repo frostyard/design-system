@@ -11,7 +11,8 @@
   async function ensurePagefind() {
     if (pagefind || failed) return pagefind;
     try {
-      pagefind = await import(/* @vite-ignore */ "/pagefind/pagefind.js");
+      const pagefindUrl = "/pagefind/pagefind.js";
+      pagefind = await import(/* @vite-ignore */ pagefindUrl);
       await pagefind.init();
     } catch {
       failed = true;
