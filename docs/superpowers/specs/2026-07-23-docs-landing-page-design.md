@@ -1,7 +1,7 @@
 # Frostyard docs landing page - design
 
 Date: 2026-07-23
-Status: approved (design), pending spec review
+Status: approved
 
 ## Purpose
 
