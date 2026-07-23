@@ -18,11 +18,12 @@ Brand rules for any content you write: sentence case headings, product names low
    - `kicker` — GitHub description via `gh repo view --json description -q .description`; if empty, ask for a 3–6 word descriptor.
    - `sourceUrl` — the origin remote as an https URL. No remote → ask.
    - `url` — default `https://<name>-docs.bjk.workers.dev`; flag this as a guess in your summary.
+   - `landing` — derive project-specific copy from reliable README statements: two short headline beats, one declarative purpose sentence, and exactly three summary points covering orientation, setup, and deeper use or reference. If the README does not support any of these values, ask the user for the missing landing copy instead of inventing project behavior.
 
 ## Apply
 
 3. Copy the payload: `cp -R <this skill's directory>/scaffold site` (then delete any `site/node_modules`, `site/dist`, `site/.astro` that came along).
-4. Fill the four values in `site/src/site.config.ts`.
+4. Fill the four base values and the `landing` object in `site/src/site.config.ts`. Keep landing values concise and follow the brand rules above.
 5. Set `"name"` in `site/wrangler.jsonc` to `<name>-docs`.
 6. Append to the host repo's `.gitignore` (create it if missing):
 
