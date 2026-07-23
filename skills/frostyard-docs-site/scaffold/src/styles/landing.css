@@ -1,8 +1,8 @@
 .dk-landing{max-width:var(--container-max);margin:auto;padding:0 var(--container-pad) 5rem}
 .dk-landing-hero{display:flex;min-height:500px;max-width:820px;flex-direction:column;justify-content:center;padding:5rem 0 6rem}
 .dk-landing-eyebrow{font:var(--text-eyebrow-weight) var(--text-eyebrow-size) var(--font-sans);letter-spacing:var(--text-eyebrow-ls);text-transform:uppercase;color:var(--text-eyebrow);margin:0 0 1.1rem}
-.dk-landing h1{font-size:var(--text-display-size);font-weight:var(--text-display-weight);letter-spacing:var(--text-display-ls);line-height:var(--text-display-lh);margin:0}
-.dk-landing h1 em{font-family:var(--font-serif-accent);font-weight:400;color:var(--ice)}
+.dk-landing h1{font-size:var(--text-display-size);font-weight:var(--text-display-weight);letter-spacing:var(--text-display-ls);line-height:var(--text-display-lh);margin:0;overflow-wrap:break-word}
+.dk-landing h1 span{font-family:var(--font-serif-accent);font-weight:400;color:var(--ice)}
 .dk-landing-lede{max-width:565px;margin:2rem 0 2.4rem;color:var(--text-muted);font-size:var(--text-lede-size);line-height:1.65}
 .dk-landing-actions{display:flex;flex-wrap:wrap;gap:.8rem}
 .dk-landing-action{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;min-height:44px;padding:.7rem 1rem;border:1px solid transparent;border-radius:var(--radius-button);font-size:.84rem;font-weight:700;text-decoration:none}
